@@ -25,16 +25,16 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {portfolioData.projects.map((project) => (
-            <div 
-              key={project.id} 
+            <div
+              key={project.id}
               className="p-8 rounded-2xl bg-gradient-to-br from-[#111827] to-[#0F172A] border border-cyan-500/20 transition-all group relative overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-ai-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
+
               <div className="relative z-10 flex flex-col h-full">
                 <h3 className="text-2xl font-bold font-sora mb-3 group-hover:text-ai-secondary transition-colors">{project.title}</h3>
                 <p className="text-slate-300 mb-6 text-sm leading-relaxed">{project.shortDescription}</p>
-                
+
                 {/* Architecture Visuals */}
                 <div className="mb-8 p-4 rounded-xl bg-black/20 border border-white/5">
                   <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Architecture Flow</h4>
@@ -55,7 +55,7 @@ export default function Projects() {
                 <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, idx) => (
-                      <span key={idx} className="px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full bg-ai-primary/10 text-ai-primary border border-ai-primary/20">
+                      <span key={idx} className="px-2.5 py-1 text-[10px] uppercase font-bold tracking-wider rounded-full bg-ai-primary/10 text-ai-primary border border-ai-primary/50">
                         {tag}
                       </span>
                     ))}

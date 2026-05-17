@@ -1,5 +1,5 @@
 import { portfolioData } from "@/data/portfolioData";
-import { Mail, Phone, Github, Linkedin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -18,22 +18,22 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="p-8 rounded-2xl glassmorphism border border-white/10 shadow-2xl">
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-            <form className="space-y-4">
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300">Name</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors" placeholder="John Doe" />
+                  <label htmlFor="name" className="text-sm font-medium text-slate-300">Name</label>
+                  <input type="text" id="name" name="name" required className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300">Email</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors" placeholder="john@example.com" />
+                  <label htmlFor="email" className="text-sm font-medium text-slate-300">Email</label>
+                  <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors" placeholder="john@example.com" />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-300">Message</label>
-                <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors resize-none" placeholder="How can I help you?"></textarea>
+                <label htmlFor="message" className="text-sm font-medium text-slate-300">Message</label>
+                <textarea id="message" name="message" required rows={4} className="w-full px-4 py-3 rounded-lg bg-ai-bg/50 border border-white/10 focus:border-ai-primary outline-none transition-colors resize-none" placeholder="How can I help you?"></textarea>
               </div>
-              <button type="button" className="w-full py-3 rounded-lg bg-ai-primary hover:bg-ai-primary/80 text-white font-bold transition-all shadow-[0_0_15px_rgba(124,58,237,0.4)]">
+              <button type="submit" className="w-full py-3 rounded-lg bg-ai-primary hover:bg-ai-primary/80 text-white font-bold transition-all shadow-[0_0_15px_rgba(124,58,237,0.4)]">
                 Send Message
               </button>
             </form>
@@ -54,11 +54,11 @@ export default function Contact() {
 
               <div className="flex items-center gap-4 text-slate-300 group">
                 <div className="p-4 rounded-xl bg-ai-card border border-white/5 group-hover:border-ai-secondary/50 transition-colors">
-                  <Phone className="w-6 h-6 text-ai-secondary" />
+                  <MapPin className="w-6 h-6 text-ai-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">Phone / WhatsApp</h4>
-                  <p className="text-sm text-slate-400">{portfolioData.contact.phone}</p>
+                  <h4 className="font-bold text-lg">Location</h4>
+                  <p className="text-sm text-slate-400">{portfolioData.contact.location}</p>
                 </div>
               </div>
             </div>

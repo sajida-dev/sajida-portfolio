@@ -55,28 +55,55 @@ export const portfolioData = {
       description: "Mentoring global students in Python programming, reviewing code, and leading interactive technical sessions."
     },
     {
-      period: "2024 - 2026",
+      period: "2024 - Present",
+      role: "Undergraduate Researcher",
+      company: "University of Education",
+      description: "Collaborating on a research-based project under the supervision of a university professor."
+    },
+    {
+      period: "2023 - Present",
       role: "Freelance Full Stack Developer",
       company: "Self-Employed",
       description: "Built and deployed robust Laravel and Vue.js applications for international clients, integrating complex APIs and optimizing database queries."
     },
     {
-      period: "2024",
+      period: "2026-Present",
+      role: "Computer Lecturer",
+      company: "Superior College Jauharabad",
+      description: "Lecturer in Computer Science department."
+    },
+    {
+      period: "2025-Present",
       role: "Community Lead",
-      company: "UOE DevHub",
+      company: "UOE DevHub Alumni",
       description: "Led the university developer community, organizing hackathons and technical workshops for over 500 students."
     }
   ],
   achievements: [
     {
       metric: "96.7%",
-      title: "National Skill Competency Test",
+      title: "National Skill Competency Test 2026",
       description: "Scored in the top percentile nationwide in the comprehensive IT and Computer Science examination."
     },
     {
-      metric: "10+",
-      title: "Hackathon Participant",
-      description: "Consistently participated in national, international and university-level hackathons and secure top positions."
+      metric: "Nov 2023",
+      title: "Prime Minister’s Youth Laptop Scheme Award",
+      description: "Awarded based on merit and exceptional academic performance."
+    },
+    {
+      metric: "2022 - Present",
+      title: "Merit-Based Scholarship",
+      description: "University of Education scholarship for maintaining excellent academic standing."
+    },
+    {
+      metric: "1st Place",
+      title: "UOE Speed Programming Competition",
+      description: "Won first position out of 35 participating teams."
+    },
+    {
+      metric: "5th Position",
+      title: "Codex 2.0 – Namal University",
+      description: "Secured 5th position out of 50 teams in competitive programming."
     },
     {
       metric: "Top 5%",
@@ -88,14 +115,24 @@ export const portfolioData = {
     {
       name: "Prof. Ikram Lali",
       title: "Principal, University of Education Lahore",
+      image: "https://drive.usercontent.google.com/download?id=1zLfeSnAF15YUcI3D_QvAjUCxYowkPL5R",
       email: "M.i.lali@ue.edu.pk",
-      relationship: "Academic & Hackathon Mentor and Supervisor during undergraduate coursework"
+      relationship: "Academic & Hackathon Mentor and Supervisor during undergraduate coursework",
+      links: [
+        { name: "Google Scholar", url: "https://scholar.google.com/citations?user=wG9e2ncAAAAJ&hl=en" },
+        { name: "LinkedIn", url: "https://pk.linkedin.com/in/m-ikram-ullah-lali-b8a39b62" },
+        { name: "University Profile", url: "https://ue.edu.pk/empprofile.php?id=398" }
+      ]
     },
     {
       name: "Dr. Imran Kazmi",
       title: "Assistant Professor, University of Education Lahore",
+      image: "https://ue.edu.pk/uetech/pictures/2020-06-07-1591540414my%20pic.jpg",
       email: "imrankazmi@ue.edu.pk",
-      relationship: "Final Year Project Supervisor and Hackathon Mentor"
+      relationship: "Final Year Project Supervisor and Hackathon Mentor",
+      links: [
+        { name: "University Profile", url: "https://ue.edu.pk/empprofile.php?id=279" }
+      ]
     }
   ],
   projects: [
@@ -106,10 +143,12 @@ export const portfolioData = {
       architecture: [
         { name: "Vue.js", color: "emerald" },
         { name: "Laravel API", color: "red" },
-        { name: "Python AI", color: "blue" },
-        { name: "AWS", color: "orange" }
+        { name: "Transformer ABSA FineTuning", color: "blue" },
+        { name: "Qwen3 8B Text Embeddings", color: "yellow" },
+        { name: "GNN Training", color: "green" },
+        { name: "AWS for training", color: "orange" }
       ],
-      tags: ["Real-time systems", "AI integrations", "scalable APIs", "recommendation systems"],
+      tags: ["AI integrations", "recommendation systems"],
       highlights: ["AWS deployment", "Transformer Models", "Sentiment Analysis"],
       link: "https://github.com/sajida-dev/reviews-based-product-recommender-system"
     },
@@ -200,8 +239,7 @@ export const portfolioData = {
     email: "sajidajaved604@gmail.com",
     linkedin: "https://linkedin.com/in/sajida-javed",
     github: "https://github.com/sajida-dev",
-    phone: "03004663829",
-    location: "Jauharabad, Punjab Pakistan",
+    location: "Khushab, Punjab Pakistan",
     huggingface: "https://huggingface.co/sajida-dev",
     kaggle: "https://kaggle.com/sajidadev",
     leetcode: "https://leetcode.com/SajidaJaved",
