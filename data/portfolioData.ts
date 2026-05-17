@@ -115,7 +115,7 @@ export const portfolioData = {
     {
       name: "Prof. Ikram Lali",
       title: "Principal, University of Education Lahore",
-      image: "https://drive.usercontent.google.com/download?id=1zLfeSnAF15YUcI3D_QvAjUCxYowkPL5R",
+      image: "https://ue.edu.pk/uetech/pictures/2020-02-04-1580832920download.jpg",
       email: "M.i.lali@ue.edu.pk",
       relationship: "Academic & Hackathon Mentor and Supervisor during undergraduate coursework",
       links: [
