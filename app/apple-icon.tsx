@@ -19,9 +19,9 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0B1120",
+          background: "#0F172A",
           borderRadius: "40px",
-          border: "4px solid rgba(6, 182, 212, 0.5)",
+          border: "4px solid #10B981",
         }}
       >
         <div
@@ -29,9 +29,7 @@ export default function Icon() {
             fontSize: "90px",
             fontWeight: 800,
             fontFamily: "sans-serif",
-            background: "linear-gradient(to right, #7C3AED, #06B6D4)",
-            backgroundClip: "text",
-            color: "transparent",
+            color: "#10B981",
             letterSpacing: "-4px",
           }}
         >

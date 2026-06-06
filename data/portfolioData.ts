@@ -1,250 +1,334 @@
+export interface Project {
+  id: string;
+  title: string;
+  role: string;
+  badges: string[];
+  description: string;
+  tech: string[];
+  link?: string;
+  type?: "Live" | "GitHub" | "Demo";
+}
+
+export interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  oneLineImpact: string;
+  description: string;
+  contributions: string[];
+  technologies: string[];
+}
+
+export interface Achievement {
+  title: string;
+  description: string;
+  links?: { label: string; url: string }[];
+}
+
+export interface Competition {
+  name: string;
+  url?: string;
+  badge?: string;
+  image?: string;
+}
+
+export interface SkillCategory {
+  title: string;
+  items: string[];
+}
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  image: string;
+  category: "AI & ML" | "Programming" | "Web & Database" | "Other Professional";
+}
+
 export const portfolioData = {
   hero: {
-    heading: "AI Engineer & Laravel Full Stack Developer",
-    specialization: "Building scalable AI-powered web applications using Laravel, Vue.js, Python, and AWS.",
-    badges: [
-      "AI + Full Stack Engineer",
-      "Laravel + Vue.js Specialist",
-      "Stanford Code in Place Section Leader",
-      "Hackathon Winner",
-      "Open to Remote Opportunities"
-    ],
-    availability: "Available for AI Internships & Remote Opportunities"
-  },
-  about: {
-    description: "I am a research-oriented AI Engineer and Full Stack Laravel Developer with a strong competitive programming background. As a Stanford Code in Place Section Leader, I focus on building scalable systems while mentoring the next generation of engineers.",
-    highlights: [
-      "Stanford Code in Place Section Leader 2026",
-      "Deep understanding of Transformer models and PyTorch",
-      "Proven competitive programming and hackathon track record"
+    name: "Sajida Javed",
+    title: "Engineering Reliable SaaS & AI Systems",
+    stanfordBadge: "Section Leader @ Stanford Code in Place (2026)",
+    statement: "Building production-ready Laravel web applications, multi-tenant SaaS platforms, and secure backend architectures.",
+    metrics: [
+      { value: "3+ Years", label: "Dev Experience" },
+      { value: "7+", label: "Commercial Projects" },
+      { value: "4+", label: "Production Deployments" }
     ]
-  },
-  researchAndOpenSource: {
-    platforms: [
-      { name: "Hugging Face", link: "https://huggingface.co/sajida-dev" },
-      { name: "Kaggle", link: "https://kaggle.com/sajidadev" },
-      { name: "GitHub", link: "https://github.com/sajida-dev" }
-    ],
-    description: "Active contributor to the open-source AI community, experimenting with Graph Neural Networks (GNNs), multi-agent systems, and releasing fine-tuned models for public research."
-  },
-  techStack: [
-    { name: "Laravel", category: "Backend" },
-    { name: "Vue.js", category: "Frontend" },
-    { name: "Python", category: "AI/ML" },
-    { name: "AWS", category: "Deployment" },
-    { name: "Tailwind CSS", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "PyTorch", category: "AI/ML" },
-    { name: "MySQL", category: "Database" },
-    { name: "Flask", category: "Backend" },
-    { name: "REST APIs", category: "Backend" }
-  ],
-  skills: {
-    ai: ["PyTorch", "Transformers", "GNNs", "LangChain", "OpenAI API", "Hugging Face"],
-    backend: ["Laravel", "Python", "Flask", "REST APIs", "WebSockets"],
-    frontend: ["Vue.js", "Next.js", "Tailwind CSS", "TypeScript", "React"],
-    cloud: ["AWS (EC2, S3, RDS)", "Docker", "CI/CD", "Nginx"],
-    databases: ["MySQL", "PostgreSQL", "Redis", "Vector Databases"],
-    tools: ["Git", "Postman", "Linux", "VS Code"]
   },
   experience: [
     {
-      period: "2026 - Present",
       role: "Section Leader",
       company: "Stanford Code in Place",
-      description: "Mentoring global students in Python programming, reviewing code, and leading interactive technical sessions."
+      period: "Apr 2026 – May 2026",
+      oneLineImpact: "Mentored global programming students in Stanford's global Python coding initiative.",
+      description: "Selected to mentor international students in Python programming fundamentals, debugging practices, and algorithmic problem-solving.",
+      contributions: [
+        "Mentored international students in programming fundamentals",
+        "Guided global learners through python code debugging",
+        "Conducted interactive support sessions on problem solving"
+      ],
+      technologies: ["Python", "Problem Solving", "Git"]
     },
     {
-      period: "2024 - Present",
-      role: "Undergraduate Researcher",
-      company: "University of Education",
-      description: "Collaborating on a research-based project under the supervision of a university professor."
+      role: "Full-Stack Laravel Developer",
+      company: "Freelance",
+      period: "Sep 2024 – Oct 2025",
+      oneLineImpact: "Delivered scalable Laravel web applications and multi-tenant SaaS platforms.",
+      description: "Developed and deployed commercial multi-tenant SaaS systems integrating secure subscription architectures and real-time messaging services.",
+      contributions: [
+        "Built multi-tenant architectures with isolated database instances",
+        "Integrated Stripe payment gateways for billing workflows",
+        "Implemented real-time features using Laravel Echo and Pusher WebSockets"
+      ],
+      technologies: ["Laravel", "Vue.js", "Redis", "Stripe", "AWS"]
     },
     {
-      period: "2023 - Present",
-      role: "Freelance Full Stack Developer",
-      company: "Self-Employed",
-      description: "Built and deployed robust Laravel and Vue.js applications for international clients, integrating complex APIs and optimizing database queries."
-    },
-    {
-      period: "2026-Present",
-      role: "Computer Lecturer",
-      company: "Superior College Jauharabad",
-      description: "Lecturer in Computer Science department."
-    },
-    {
-      period: "2025-Present",
-      role: "Community Lead",
-      company: "UOE DevHub Alumni",
-      description: "Led the university developer community, organizing hackathons and technical workshops for over 500 students."
+      role: "Backend Developer",
+      company: "AwazDo",
+      period: "Aug 2023 – Jun 2024",
+      oneLineImpact: "Optimized server reliability, API performance, and database architectures.",
+      description: "Investigated and resolved database query bottlenecks, connection pools, and backend production API service failures.",
+      contributions: [
+        "Resolved critical database query deadlocks",
+        "Optimized slow SQL queries, reducing load by 40%",
+        "Engineered secure, scalable REST APIs for frontend integration"
+      ],
+      technologies: ["Laravel", "PHP", "MySQL", "API Tuning", "Redis"]
     }
-  ],
-  achievements: [
-    {
-      metric: "96.7%",
-      title: "National Skill Competency Test 2026",
-      description: "Scored in the top percentile nationwide in the comprehensive IT and Computer Science examination."
-    },
-    {
-      metric: "Nov 2023",
-      title: "Prime Minister’s Youth Laptop Scheme Award",
-      description: "Awarded based on merit and exceptional academic performance."
-    },
-    {
-      metric: "2022 - Present",
-      title: "Merit-Based Scholarship",
-      description: "University of Education scholarship for maintaining excellent academic standing."
-    },
-    {
-      metric: "1st Place",
-      title: "UOE Speed Programming Competition",
-      description: "Won first position out of 35 participating teams."
-    },
-    {
-      metric: "5th Position",
-      title: "Codex 2.0 – Namal University",
-      description: "Secured 5th position out of 50 teams in competitive programming."
-    },
-    {
-      metric: "Top 5%",
-      title: "LeetCode & HackerRank",
-      description: "Maintained a strong competitive programming profile, solving hundreds of complex algorithmic challenges."
-    }
-  ],
-  references: [
-    {
-      name: "Prof. Ikram Lali",
-      title: "Principal, University of Education Lahore",
-      image: "https://ue.edu.pk/uetech/pictures/2020-02-04-1580832920download.jpg",
-      email: "M.i.lali@ue.edu.pk",
-      relationship: "Academic & Hackathon Mentor and Supervisor during undergraduate coursework",
-      links: [
-        { name: "Google Scholar", url: "https://scholar.google.com/citations?user=wG9e2ncAAAAJ&hl=en" },
-        { name: "LinkedIn", url: "https://pk.linkedin.com/in/m-ikram-ullah-lali-b8a39b62" },
-        { name: "University Profile", url: "https://ue.edu.pk/empprofile.php?id=398" }
-      ]
-    },
-    {
-      name: "Dr. Imran Kazmi",
-      title: "Assistant Professor, University of Education Lahore",
-      image: "https://ue.edu.pk/uetech/pictures/2020-06-07-1591540414my%20pic.jpg",
-      email: "imrankazmi@ue.edu.pk",
-      relationship: "Final Year Project Supervisor and Hackathon Mentor",
-      links: [
-        { name: "University Profile", url: "https://ue.edu.pk/empprofile.php?id=279" }
-      ]
-    }
-  ],
+  ] as Experience[],
   projects: [
     {
-      id: "ai-product-recommender",
-      title: "AI-Powered Product Recommender",
-      shortDescription: "Built an AI-powered recommendation pipeline using transformer-based sentiment analysis models to deliver personalized e-commerce insights.",
-      architecture: [
-        { name: "Vue.js", color: "emerald" },
-        { name: "Laravel API", color: "red" },
-        { name: "Transformer ABSA FineTuning", color: "blue" },
-        { name: "Qwen3 8B Text Embeddings", color: "yellow" },
-        { name: "GNN Training", color: "green" },
-        { name: "AWS for training", color: "orange" }
-      ],
-      tags: ["AI integrations", "recommendation systems"],
-      highlights: ["AWS deployment", "Transformer Models", "Sentiment Analysis"],
-      link: "https://github.com/sajida-dev/reviews-based-product-recommender-system"
+      id: "awazdo-project",
+      title: "AwazDo (Production Maintenance & Debugging)",
+      role: "Backend Developer (Freelance)",
+      badges: ["Production System"],
+      description: "Worked on a live US-based platform, taking ownership of production issues across the application. Investigated and resolved backend bugs, database-related problems, API failures, and user-reported issues, improving platform stability and overall system reliability. Collaborated with existing codebases, identified root causes of complex problems, and delivered fixes without disrupting active users.",
+      tech: ["Laravel", "PHP", "MySQL", "API Tuning"]
     },
     {
-      id: "ai-playground",
-      title: "AI Playground",
-      shortDescription: "Interactive multi-model environment designed for experimenting with LLMs and prompt engineering, built with robust Laravel backend and real-time Vue.js interface.",
-      architecture: [
-        { name: "Vue.js", color: "emerald" },
-        { name: "Laravel", color: "red" },
-        { name: "SST Hugging Face", color: "blue" }
-      ],
-      tags: ["Real-time systems", "AI integrations"],
-      highlights: ["Multi-model testing", "Real-time interactions"],
-      link: "https://github.com/sajida-dev/ai-playground"
+      id: "load-masta",
+      title: "Load Masta",
+      role: "Full-Stack Laravel Developer",
+      badges: ["Commercial"],
+      description: "Joined an existing logistics management platform and led major system enhancements across both frontend and backend. Replaced static permission handling with a dynamic Role & Permission Management System, allowing administrators to create and manage access controls without code changes. Implemented Two-Factor Authentication (2FA), profile management features, and multiple administrative modules. Also modernized the frontend architecture, improved responsiveness across devices, and redesigned several user interfaces to create a more polished user experience.",
+      tech: ["Laravel", "PHP", "MySQL", "JavaScript"]
     },
     {
-      id: "multi-school-system",
-      title: "Multi-School Management System",
-      shortDescription: "Developed a multi-tenant SaaS application catering to multiple educational institutions with centralized management and isolated tenant databases.",
-      architecture: [
-        { name: "Vue.js", color: "emerald" },
-        { name: "Laravel SaaS", color: "red" },
-        { name: "MySQL", color: "blue" }
-      ],
-      tags: ["Multi-tenant SaaS", "Queue systems", "Cron jobs"],
-      highlights: ["Isolated databases", "Role-based access", "Automated scheduling"],
-      link: "https://github.com/sajida-dev/multi-school-system-Laravel-vue"
+      id: "belauctions",
+      title: "Belauctions",
+      role: "Laravel Backend Developer",
+      badges: ["Commercial"],
+      description: "Contributed to a live auction platform by designing and developing Laravel REST APIs used across multiple application modules. Implemented backend business logic, optimized database interactions, and integrated APIs with frontend components to support seamless data exchange and platform functionality.",
+      tech: ["Laravel", "MySQL", "REST APIs"]
     },
     {
-      id: "real-estate-system",
+      id: "tusksol",
+      title: "TuskSol",
+      role: "Frontend Developer",
+      badges: ["Client System"],
+      description: "Enhanced the responsiveness of an existing business platform by redesigning frontend layouts and improving cross-device compatibility. Fixed UI inconsistencies and implemented visual improvements that provided a smoother experience for end users.",
+      tech: ["Vue.js", "JavaScript", "Responsive Design"]
+    },
+    {
+      id: "real-estate",
       title: "Real Estate Management System",
-      shortDescription: "Engineered a comprehensive real estate platform with high-performance search, geospatial queries, and real-time property updates.",
-      architecture: [
-        { name: "Next.js", color: "emerald" },
-        { name: "Laravel", color: "red" },
-      ],
-      tags: ["scalable APIs", "Stripe integration"],
-      highlights: ["Geospatial queries", "Stripe payments", "Real-time updates"],
-      link: "https://github.com/sajida-dev/rems-laravel"
+      role: "Full-Stack Developer",
+      badges: ["SaaS Platform"],
+      description: "Built a full-scale platform with agents and client users and implemented real-time notifications. Integrated Stripe payments, SMTP email, queued email jobs and chat system using WebSockets. Scheduled cron jobs for automated tasks and reports.",
+      tech: ["Laravel", "Pusher", "Stripe", "Redis"],
+      link: "https://github.com/sajida-dev",
+      type: "GitHub"
     },
     {
-      id: "molecule-generator",
-      title: "Molecule Generator",
-      shortDescription: "A research-focused tool using Graph Neural Networks to predict and generate novel molecular structures for biochemical analysis.",
-      architecture: [
-        { name: "Python", color: "yellow" },
-        { name: "PyTorch (GNN)", color: "blue" }
-      ],
-      tags: ["AI integrations", "Graph Neural Networks"],
-      highlights: ["GNNs", "Biochemical modeling"],
-      link: "https://github.com/sajida-dev"
+      id: "university-system",
+      title: "University Management System",
+      role: "Full-Stack Developer",
+      badges: ["Client System"],
+      description: "Built an UMS using Laravel to automate and streamline various academic and administrative tasks for different users like Admins, Faculty, Jobs, Students, and Applicants.",
+      tech: ["Laravel", "PHP", "MySQL"],
+      link: "https://github.com/sajida-dev",
+      type: "GitHub"
+    },
+    {
+      id: "photography-studio",
+      title: "Photography Website (Javed Studio)",
+      role: "Frontend Developer",
+      badges: ["Portfolio Site"],
+      description: "Built a photography portfolio website by using Masonry layout showcasing categorized images.",
+      tech: ["JavaScript", "HTML", "Masonry CSS"],
+      link: "https://sajidajaved.netlify.app",
+      type: "Live"
+    },
+    {
+      id: "multi-school",
+      title: "Multi-School Management System (Paid Project)",
+      role: "Full-Stack Developer",
+      badges: ["SaaS Platform"],
+      description: "Built a multi-tenant School Management System with modular design and role-based access control. Improved system performance by implementing server-side processing for large data handling. Automated background tasks (notifications, reminders, reports) using queues and scheduled jobs. Deployed and maintained the production application on a live server.",
+      tech: ["Laravel", "Vue.js", "MySQL", "Hostinger"],
+      link: "https://github.com/sajida-dev",
+      type: "GitHub"
     }
-  ],
-  whyHireMe: [
+  ] as Project[],
+  achievements: [
     {
-      title: "AI + Full Stack Combination",
-      description: "Bridging the gap between intelligent AI models and scalable web infrastructure."
+      title: "National Skill Competency Test",
+      description: "Scored in the 96.7 Percentile nationwide in IT competency standards."
     },
     {
-      title: "Production Laravel Experience",
-      description: "Proven track record of building, optimizing, and deploying complex Laravel applications."
+      title: "University Merit Scholarship",
+      description: "Received 2022 – Present for maintaining high academic standing."
     },
     {
-      title: "Competitive Programming & Problem Solving",
-      description: "Strong algorithmic foundation honed through competitive programming and hackathons."
+      title: "UOE Speed Programming Competition",
+      description: "Won 1st Position out of 35 Teams in algorithmic speed challenges.",
+      links: [
+        { label: "Dec 2024 Leaderboard", url: "https://www.hackerrank.com/contests/speed-programming-2024-december/leaderboard" },
+        { label: "April 2025 Leaderboard", url: "https://www.hackerrank.com/contests/speed-programming-2025-april/leaderboard" }
+      ]
     },
     {
-      title: "Research-Oriented AI Development",
-      description: "Active engagement in AI research, utilizing advanced tools like PyTorch and GNNs."
+      title: "Codex 2.0 & 3.0 (Namal University)",
+      description: "Top 5 Finish in Codex 2.0 and successfully qualified with verified proof in Codex 3.0.",
+      links: [
+        { label: "Codex 2.0 Leaderboard", url: "https://www.hackerrank.com/contests/codex-24/leaderboard" },
+        { label: "Codex 3.0 Certificate", url: "https://drive.google.com/file/d/1UpSpZIm8mAqECcV_0LSUq0fJzflEWT1A/view?usp=drive_link" }
+      ]
     }
-  ],
-  currentlyBuilding: [
-    "AI Recommender Pipeline",
-    "AI Playground",
-    "Molecule Generator",
-    "Agentic AI Exploration"
-  ],
-  currentlyLearning: [
-    "Agentic AI",
-    "RAG Systems",
-    "LangChain",
-    "Graph Neural Networks",
-    "AI Automation",
-    "Multi-Agent Systems"
-  ],
+  ] as Achievement[],
+  skills: [
+    { title: "Backend Engineering", items: ["Laravel", "PHP", "REST APIs", "Authentication", "RBAC", "WebSockets"] },
+    { title: "Frontend Engineering", items: ["Vue.js", "Next.js", "JavaScript", "Responsive Design"] },
+    { title: "AI & Machine Learning", items: ["Python", "PyTorch", "Scikit-Learn", "Keras", "Transformers", "NLP", "Pandas", "NumPy"] },
+    { title: "Cloud & DevOps", items: ["AWS", "SageMaker", "S3", "Hostinger", "cPanel"] },
+    { title: "Databases", items: ["MySQL", "Redis"] }
+  ] as SkillCategory[],
+  competitiveProgramming: {
+    profiles: [
+      { name: "LeetCode", url: "https://leetcode.com/SajidaJaved" },
+      { name: "HackerRank", url: "https://hackerrank.com/sajidajaved" },
+      { name: "GeeksforGeeks", url: "https://www.geeksforgeeks.org/user/sajidajaved/" },
+      { name: "Kaggle", url: "https://kaggle.com/sajidadev" },
+      { name: "Hugging Face", url: "https://huggingface.co/sajida-dev" }
+    ],
+    competitions: [
+      { name: "UOE Speed Programming Competition (Dec 2024)", url: "https://drive.google.com/file/d/1wIJXfJ-GgC-CjNORK2t0a1MRgEYEbKpq/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe dec 2024.png" },
+      { name: "UOE Speed Programming Competition (April 2025)", url: "https://drive.google.com/file/d/11uRthmTXWfOqqMhLfKrlM7FXUqdwVScY/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe april 2025.png" },
+      { name: "Codex 2.0 (Namal)", url: "https://drive.google.com/file/d/1N_jDgpbRIOwnQf6XPgD04GHVK1nprMFA/view?usp=drive_link", badge: "Top 5", image: "/competition_certificates/codex2.0.jpeg" },
+      { name: "CALICO Spring 2025 (UC Berkeley)", url: "https://drive.google.com/file/d/1bDC65JYVoB-iT_6S_IBZM5UtJlAcNEto/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 25.png" },
+      { name: "ICSC 2025", url: "https://icscompetition.org/c/Certificate-QR-2025-FF828CF9590-abad82cee5f29a2604b408b38147f777.pdf", badge: "Certificate", image: "/competition_certificates/icsc qualification round certificate.png" },
+      { name: "CALICO Spring 2026 (UC Berkeley)", url: "https://drive.google.com/file/d/1oguUwtW_GE6DL5dnx0JQQ15YfJ5xGBQo/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 26.png" },
+      { name: "MIT² Informatics Tournament", badge: "Qualified" },
+      { name: "ICPC Winter Challenge (Huawei)", badge: "Participant" }
+    ] as Competition[]
+  },
+  certifications: [
+    {
+      title: "Neural Networks and Deep Learning",
+      issuer: "DeepLearning.AI (Coursera)",
+      image: "/all_certificates/Coursera - neural networks and deep learning CVCU5BGISF77.png",
+      category: "AI & ML"
+    },
+    {
+      title: "Improving Deep Neural Networks",
+      issuer: "DeepLearning.AI (Coursera)",
+      image: "/all_certificates/Coursera improving hyperparams SH9FRVBP959T.png",
+      category: "AI & ML"
+    },
+    {
+      title: "Structuring Machine Learning Projects",
+      issuer: "DeepLearning.AI (Coursera)",
+      image: "/all_certificates/Coursera QSXWU5CHJVZB.png",
+      category: "AI & ML"
+    },
+    {
+      title: "Data Analyst Professional Certificate",
+      issuer: "IBM / Coursera",
+      image: "/all_certificates/Sajida Javed Data analyst.png",
+      category: "AI & ML"
+    },
+    {
+      title: "National Skill Competency Test (NCST)",
+      issuer: "National IT Board",
+      image: "/all_certificates/ncst 2026.jpeg",
+      category: "Other Professional"
+    },
+    {
+      title: "IT & Software Development Internship",
+      issuer: "Police Department IT Division",
+      image: "/all_certificates/police internship.jpeg",
+      category: "Other Professional"
+    },
+    {
+      title: "1-Year Diploma in Computer Applications",
+      issuer: "Technical Education Board",
+      image: "/all_certificates/1 year computer course.jpeg",
+      category: "Other Professional"
+    },
+    {
+      title: "7-Day LeetCode Streak Challenge",
+      issuer: "LeetCode",
+      image: "/all_certificates/7 days leetcode Sajida Javed.png",
+      category: "Programming"
+    },
+    {
+      title: "WordSprint 2.0 Competency Certificate",
+      issuer: "Namal University",
+      image: "/all_certificates/Sajida Javed WordSprint 2.0 Certificate.png",
+      category: "Programming"
+    },
+    {
+      title: "Problem Solving (Basic)",
+      issuer: "HackerRank",
+      image: "/all_certificates/hackerrank problem solving basic certificate.png",
+      category: "Programming"
+    },
+    {
+      title: "Problem Solving Skills (Basic)",
+      issuer: "HackerRank",
+      image: "/all_certificates/problem_solving_basic certificate.png",
+      category: "Programming"
+    },
+    {
+      title: "Python Programming (Basic)",
+      issuer: "HackerRank",
+      image: "/all_certificates/python_basic certificate.png",
+      category: "Programming"
+    },
+    {
+      title: "Blockchain & Web Integration",
+      issuer: "Namal Web3/Blockchain Lab",
+      image: "/all_certificates/sajida javed integration blockchain web.png",
+      category: "Web & Database"
+    },
+    {
+      title: "Web Development Specialist",
+      issuer: "Software Industry Certification",
+      image: "/all_certificates/web.jpeg",
+      category: "Web & Database"
+    },
+    {
+      title: "Amazon Virtual Assistant (VA)",
+      issuer: "E-Commerce Training Group",
+      image: "/all_certificates/virtual assistant for amazon.jpeg",
+      category: "Other Professional"
+    },
+    {
+      title: "Chinese Language Certificate",
+      issuer: "Language Competency Board",
+      image: "/all_certificates/chinese language.jpeg",
+      category: "Other Professional"
+    }
+  ] as Certification[],
   contact: {
     email: "sajidajaved604@gmail.com",
     linkedin: "https://linkedin.com/in/sajida-javed",
     github: "https://github.com/sajida-dev",
-    location: "Khushab, Punjab Pakistan",
-    huggingface: "https://huggingface.co/sajida-dev",
-    kaggle: "https://kaggle.com/sajidadev",
+    portfolio: "https://sajidajaved.netlify.app",
     leetcode: "https://leetcode.com/SajidaJaved",
     hackerrank: "https://hackerrank.com/sajidajaved",
-    portfolio: "https://sajidajaved.netlify.app",
-    resumeUrl: "https://docs.google.com/document/d/1IGvG4b7Spj8dAmoRvLBO3Iah8ofvOIOhLI9ocD15H28/export?format=pdf"
+    kaggle: "https://kaggle.com/sajidadev",
+    huggingface: "https://huggingface.co/sajida-dev"
   }
 };

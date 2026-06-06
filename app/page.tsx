@@ -1,38 +1,28 @@
 import Navbar from "@/components/navigation/Navbar";
 import Hero from "@/components/sections/Hero";
-import WhyHireMe from "@/components/sections/WhyHireMe";
-import TechStack from "@/components/sections/TechStack";
-import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import CurrentlyBuilding from "@/components/sections/CurrentlyBuilding";
-import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
+import SelectedWork from "@/components/sections/SelectedWork";
 import Achievements from "@/components/sections/Achievements";
-import Research from "@/components/sections/Research";
-import References from "@/components/sections/References";
+import TechnicalExpertise from "@/components/sections/TechnicalExpertise";
+import CompetitiveProgramming from "@/components/sections/CompetitiveProgramming";
+import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
-import Chatbot from "@/components/chatbot/Chatbot";
 import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-ai-bg text-white selection:bg-ai-primary/30">
+      <main className="min-h-screen bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-950">
         <Hero />
-        <TechStack />
-        <WhyHireMe />
-        <About />
-        <Skills />
-        <CurrentlyBuilding />
-        <Projects />
         <Experience />
+        <SelectedWork />
         <Achievements />
-        <Research />
-        <References />
+        <TechnicalExpertise />
+        <CompetitiveProgramming />
+        <Certifications />
         <Contact />
         <Footer />
-        <Chatbot />
       </main>
     </>
   );

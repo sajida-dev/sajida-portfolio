@@ -1,44 +1,121 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { portfolioData } from "@/data/portfolioData";
+import { X, FileText, Download } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  const menuItems = [
+    { label: "Home", href: "#hero", id: "home" },
+    { label: "Experience", href: "#experience", id: "experience" },
+    { label: "Selected Work", href: "#projects", id: "projects" },
+    { label: "Achievements", href: "#achievements", id: "achievements" },
+    { label: "Technical Expertise", href: "#skills", id: "skills" },
+    { label: "Certifications", href: "#certifications", id: "certifications" },
+    { label: "Contact", href: "#contact", id: "contact" }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
+
+      const scrollPosition = window.scrollY + 120; // Nav height offset
+      const sections = ["hero", "experience", "projects", "achievements", "skills", "certifications", "contact"];
+      
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId === "hero" ? "home" : sectionId);
+            break;
+          }
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "py-4" : "py-6"}`}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className={`flex items-center justify-between rounded-full px-6 py-3 transition-all ${scrolled ? "glassmorphism shadow-lg border-white/10" : "bg-transparent"}`}>
-          <a href="#" className="font-sora font-bold text-xl tracking-tighter">
-            SJ<span className="text-ai-primary">.</span>
-          </a>
-          
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
-            <a href="#projects" className="text-slate-300 hover:text-white transition-colors">Projects</a>
-            <a href="#experience" className="text-slate-300 hover:text-white transition-colors">Experience</a>
-            <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-          </nav>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className={`flex items-center justify-between rounded-full px-6 py-3 transition-all ${scrolled ? "bg-white/95 border border-slate-200 shadow-sm" : "bg-transparent border border-transparent"}`}>
+            <a href="#hero" className="font-sora font-bold text-xl tracking-tighter text-slate-900">
+              Sajida<span className="text-emerald-600">.</span>
+            </a>
+            
+            <nav className="hidden md:flex items-center gap-7 text-[13px] font-semibold text-slate-600">
+              {menuItems.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  className={`relative transition-colors duration-200 py-1 ${
+                    activeSection === item.id 
+                      ? "text-emerald-600 font-bold" 
+                      : "hover:text-slate-900"
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 rounded-full" />
+                  )}
+                </a>
+              ))}
+            </nav>
 
-          <div className="flex items-center gap-4">
-            <a href={portfolioData.contact.resumeUrl} target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-all">
-              Resume
-            </a>
-            <a href="#contact" className="px-5 py-2 rounded-full bg-ai-primary hover:bg-ai-primary/80 text-white text-sm font-medium transition-all shadow-[0_0_15px_rgba(124,58,237,0.3)] hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
-              Let's Talk
-            </a>
+            <div className="flex items-center gap-3 md:ml-6">
+              <button 
+                onClick={() => setIsResumeOpen(true)}
+                className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all shadow-sm hover:shadow cursor-pointer flex items-center gap-1.5"
+              >
+                <FileText className="w-3.5 h-3.5" /> Resume
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Embedded Resume Preview Modal */}
+      {isResumeOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+          <div className="bg-white rounded-xl shadow-2xl border border-slate-200 max-w-4xl w-full h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
+            <div className="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+              <div className="flex items-center gap-2">
+                <FileText className="w-5 h-5 text-emerald-600" />
+                <span className="font-sora font-semibold text-slate-800 text-sm">Sajida_Javed_Resume.pdf</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <a 
+                  href="/api/download-resume"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all"
+                >
+                  <Download className="w-3.5 h-3.5" /> Download
+                </a>
+                <button 
+                  onClick={() => setIsResumeOpen(false)} 
+                  className="p-1 rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-650 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            <div className="flex-1 bg-slate-100 relative">
+              <iframe 
+                src="https://docs.google.com/document/d/1IGvG4b7Spj8dAmoRvLBO3Iah8ofvOIOhLI9ocD15H28/preview" 
+                className="w-full h-full border-0 absolute inset-0"
+                title="Resume Preview"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
