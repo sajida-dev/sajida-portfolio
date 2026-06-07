@@ -1,6 +1,18 @@
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowRight, BrainCircuit, Cpu, Binary } from "lucide-react";
 
+export interface Project {
+  id: string;
+  title: string;
+  role: string;
+  badges: string[];
+  description: string;
+  tech: string[];
+  impact?: string[];
+  link?: string;
+  type?: "Live" | "GitHub" | "Demo";
+}
+
 export default function AIProjects() {
   const getProjectIcon = (id: string) => {
     switch (id) {
@@ -26,7 +38,7 @@ export default function AIProjects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {portfolioData.projects.ai.map((project) => (
+          {portfolioData.projects.map((project: any) => (
             <div
               key={project.id}
               className="bg-slate-50 rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover:bg-white hover:border-slate-350 hover:shadow-sm transition-all duration-300 group"
@@ -50,7 +62,7 @@ export default function AIProjects() {
                 <div className="space-y-2 mb-6">
                   <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Project Highlights</h4>
                   <ul className="space-y-1.5 text-xs text-slate-600 font-medium">
-                    {project.impact.map((point, idx) => (
+                    {(project.impact ?? []).map((point: any, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="mt-1.5 w-1 h-1 rounded-full bg-slate-400 shrink-0" />
                         <span>{point}</span>
@@ -63,9 +75,9 @@ export default function AIProjects() {
               {/* Footer */}
               <div className="pt-4 border-t border-slate-200/60 flex flex-wrap items-center justify-between gap-3 mt-auto">
                 <div className="flex flex-wrap gap-1">
-                  {project.tech.map((t, idx) => (
-                    <span 
-                      key={idx} 
+                  {project.tech.map((t: string, idx: number) => (
+                    <span
+                      key={idx}
                       className="px-1.5 py-0.5 text-[9px] font-semibold rounded bg-white text-slate-650 border border-slate-200"
                     >
                       {t}
@@ -73,10 +85,10 @@ export default function AIProjects() {
                   ))}
                 </div>
                 {project.link && project.link !== "#" && (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noreferrer" 
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="text-xs font-bold text-slate-500 hover:text-blue-600 flex items-center gap-0.5 transition-colors"
                   >
                     View <ArrowRight className="w-3 h-3" />

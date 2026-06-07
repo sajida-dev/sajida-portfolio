@@ -46,25 +46,25 @@ export default function Navbar() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
         <div className="max-w-6xl mx-auto px-4">
-          <div className={`flex items-center justify-between rounded-full px-6 py-3 transition-all ${scrolled ? "bg-white/95 border border-slate-200 shadow-sm" : "bg-transparent border border-transparent"}`}>
-            <a href="#hero" className="font-sora font-bold text-xl tracking-tighter text-slate-900">
+          <div className={`flex items-center justify-between rounded-full px-6 py-3 transition-all ${scrolled ? "bg-background/95 border border-border shadow-sm" : "bg-transparent border border-transparent"}`}>
+            <a href="#hero" className="font-sora font-bold text-xl tracking-tighter text-foreground">
               Sajida<span className="text-emerald-600">.</span>
             </a>
             
-            <nav className="hidden md:flex items-center gap-7 text-[13px] font-semibold text-slate-600">
+            <nav className="hidden md:flex items-center gap-7 text-[13px] font-semibold text-muted-foreground">
               {menuItems.map((item) => (
                 <a
                   key={item.id}
                   href={item.href}
                   className={`relative transition-colors duration-200 py-1 ${
                     activeSection === item.id 
-                      ? "text-emerald-600 font-bold" 
-                      : "hover:text-slate-900"
+                      ? "text-primary font-bold" 
+                      : "hover:text-foreground"
                   }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
                 </a>
               ))}
@@ -73,7 +73,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3 md:ml-6">
               <button 
                 onClick={() => setIsResumeOpen(true)}
-                className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all shadow-sm hover:shadow cursor-pointer flex items-center gap-1.5"
+                className="px-5 py-2 rounded-full bg-primary hover:bg-primary/90 text-white text-xs font-semibold transition-all shadow-sm hover:shadow cursor-pointer flex items-center gap-1.5"
               >
                 <FileText className="w-3.5 h-3.5" /> Resume
               </button>
@@ -84,9 +84,9 @@ export default function Navbar() {
 
       {/* Embedded Resume Preview Modal */}
       {isResumeOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-xl shadow-2xl border border-slate-200 max-w-4xl w-full h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
-            <div className="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+          <div className="bg-card rounded-xl shadow-2xl border border-border max-w-4xl w-full h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
+            <div className="p-4 border-b border-border flex justify-between items-center bg-muted">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-emerald-600" />
                 <span className="font-sora font-semibold text-slate-800 text-sm">Sajida_Javed_Resume.pdf</span>
@@ -94,13 +94,13 @@ export default function Navbar() {
               <div className="flex items-center gap-3">
                 <a 
                   href="/api/download-resume"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-all"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary/90 text-white text-xs font-semibold transition-all"
                 >
                   <Download className="w-3.5 h-3.5" /> Download
                 </a>
                 <button 
                   onClick={() => setIsResumeOpen(false)} 
-                  className="p-1 rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-650 transition-colors"
+                  className="p-1 rounded-lg hover:bg-muted text-muted-foreground hover:text-muted transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>

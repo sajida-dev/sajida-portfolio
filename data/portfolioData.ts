@@ -5,6 +5,7 @@ export interface Project {
   badges: string[];
   description: string;
   tech: string[];
+  impact?: string[];
   link?: string;
   type?: "Live" | "GitHub" | "Demo";
 }
@@ -54,6 +55,15 @@ export const portfolioData = {
       { value: "3+ Years", label: "Dev Experience" },
       { value: "7+", label: "Commercial Projects" },
       { value: "4+", label: "Production Deployments" }
+    ]
+  },
+  about: {
+    description: "Full-Stack Developer and AI Engineer with experience building scalable Laravel, Vue.js, and AI-powered applications using Python and AWS. Skilled in REST APIs, real-time systems, payment integration, and machine learning solutions. Developed multi-tenant platforms, recommendation systems, and production-ready web applications. Stanford Code in Place Section Leader 2026 with strong competitive programming and problem-solving background.",
+    highlights: [
+      "3+ years building Laravel and SaaS applications",
+      "Stanford Code in Place Section Leader (2026)",
+      "96.7 percentile in National Skill Competency Test",
+      "Competitive programmer with national-level achievements"
     ]
   },
   experience: [
@@ -192,11 +202,17 @@ export const portfolioData = {
       title: "Codex 2.0 & 3.0 (Namal University)",
       description: "Top 5 Finish in Codex 2.0 and successfully qualified with verified proof in Codex 3.0.",
       links: [
-        { label: "Codex 2.0 Leaderboard", url: "https://www.hackerrank.com/contests/codex-24/leaderboard" },
+        { label: "Codex 2.0 Leaderboard", url: "https://drive.google.com/file/d/1N_jDgpbRIOwnQf6XPgD04GHVK1nprMFA/view?usp=sharing" },
         { label: "Codex 3.0 Certificate", url: "https://drive.google.com/file/d/1UpSpZIm8mAqECcV_0LSUq0fJzflEWT1A/view?usp=drive_link" }
       ]
     }
   ] as Achievement[],
+  featuredHighlights: [
+    { title: "AI Projects", subtitle: "5", desc: "AI-driven applications and research implementations." },
+    { title: "Open Source", subtitle: "10+", desc: "Contributions to community libraries and tools." },
+    { title: "Certifications", subtitle: "12", desc: "Completed AI and development certifications." },
+    { title: "Competitions", subtitle: "6", desc: "Top placements in programming contests." }
+  ],
   skills: [
     { title: "Backend Engineering", items: ["Laravel", "PHP", "REST APIs", "Authentication", "RBAC", "WebSockets"] },
     { title: "Frontend Engineering", items: ["Vue.js", "Next.js", "JavaScript", "Responsive Design"] },

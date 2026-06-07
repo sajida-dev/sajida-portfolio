@@ -8,6 +8,7 @@ import CompetitiveProgramming from "@/components/sections/CompetitiveProgramming
 import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/navigation/Footer";
+import About from "@/components/sections/About";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-950">
         <Hero />
+        <About />
         <Experience />
         <SelectedWork />
         <Achievements />
