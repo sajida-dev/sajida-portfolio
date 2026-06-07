@@ -24,7 +24,7 @@ export default function Navbar() {
 
       const scrollPosition = window.scrollY + 120; // Nav height offset
       const sections = ["hero", "experience", "projects", "achievements", "skills", "certifications", "contact"];
-      
+
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -50,17 +50,16 @@ export default function Navbar() {
             <a href="#hero" className="font-sora font-bold text-xl tracking-tighter text-foreground">
               Sajida<span className="text-emerald-600">.</span>
             </a>
-            
+
             <nav className="hidden md:flex items-center gap-7 text-[13px] font-semibold text-muted-foreground">
               {menuItems.map((item) => (
                 <a
                   key={item.id}
                   href={item.href}
-                  className={`relative transition-colors duration-200 py-1 ${
-                    activeSection === item.id 
-                      ? "text-primary font-bold" 
-                      : "hover:text-foreground"
-                  }`}
+                  className={`relative transition-colors duration-200 py-1 ${activeSection === item.id
+                    ? "text-primary font-bold"
+                    : "hover:text-foreground"
+                    }`}
                 >
                   {item.label}
                   {activeSection === item.id && (
@@ -71,7 +70,7 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-3 md:ml-6">
-              <button 
+              <button
                 onClick={() => setIsResumeOpen(true)}
                 className="px-5 py-2 rounded-full bg-primary hover:bg-primary/90 text-white text-xs font-semibold transition-all shadow-sm hover:shadow cursor-pointer flex items-center gap-1.5"
               >
@@ -92,14 +91,16 @@ export default function Navbar() {
                 <span className="font-sora font-semibold text-slate-800 text-sm">Sajida_Javed_Resume.pdf</span>
               </div>
               <div className="flex items-center gap-3">
-                <a 
-                  href="/api/download-resume"
+                <a
+                  href="/Sajida Javed - Associate Software Engineer.pdf"
+                  download="Sajida Javed - Associate Software Engineer.pdf"
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary/90 text-white text-xs font-semibold transition-all"
                 >
                   <Download className="w-3.5 h-3.5" /> Download
                 </a>
-                <button 
-                  onClick={() => setIsResumeOpen(false)} 
+                {/* PDF preview */}
+                <button
+                  onClick={() => setIsResumeOpen(false)}
                   className="p-1 rounded-lg hover:bg-muted text-muted-foreground hover:text-muted transition-colors"
                 >
                   <X className="w-5 h-5" />
@@ -107,8 +108,8 @@ export default function Navbar() {
               </div>
             </div>
             <div className="flex-1 bg-slate-100 relative">
-              <iframe 
-                src="https://docs.google.com/document/d/1IGvG4b7Spj8dAmoRvLBO3Iah8ofvOIOhLI9ocD15H28/preview" 
+              <iframe
+                src="https://docs.google.com/document/d/1IGvG4b7Spj8dAmoRvLBO3Iah8ofvOIOhLI9ocD15H28/preview"
                 className="w-full h-full border-0 absolute inset-0"
                 title="Resume Preview"
               />
