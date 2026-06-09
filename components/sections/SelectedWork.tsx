@@ -6,23 +6,23 @@ import { Shield, Server, Activity, Layout, Home, GraduationCap, Camera, Landmark
 export default function SelectedWork() {
   const getProjectIcon = (id: string) => {
     switch (id) {
-      case "load-masta": 
+      case "load-masta":
         return <Shield className="w-5 h-5 text-emerald-600" />;
-      case "multi-school": 
+      case "multi-school":
         return <Landmark className="w-5 h-5 text-emerald-600" />;
-      case "belauctions": 
+      case "belauctions":
         return <Server className="w-5 h-5 text-emerald-650" />;
-      case "awazdo-project": 
+      case "awazdo-project":
         return <Activity className="w-5 h-5 text-emerald-600" />;
-      case "real-estate": 
+      case "real-estate":
         return <Home className="w-5 h-5 text-emerald-650" />;
-      case "university-system": 
+      case "university-system":
         return <GraduationCap className="w-5 h-5 text-emerald-600" />;
-      case "photography-studio": 
+      case "photography-studio":
         return <Camera className="w-5 h-5 text-emerald-650" />;
-      case "tusksol": 
+      case "tusksol":
         return <Layout className="w-5 h-5 text-emerald-600" />;
-      default: 
+      default:
         return <Activity className="w-5 h-5 text-slate-500" />;
     }
   };
@@ -30,7 +30,7 @@ export default function SelectedWork() {
   return (
     <section id="projects" className="py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4">
-        
+
         {/* Section Heading */}
         <div className="mb-16 text-left">
           <h2 className="text-slate-900 font-semibold tracking-tight text-[32px] md:text-[36px]">
@@ -80,10 +80,10 @@ export default function SelectedWork() {
               </div>
 
               {/* Footer: Tech Stack and Live/Code Links */}
-              <div className="pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 mt-auto">
+              <div className="pt-5 border-t border-slate-100 flex items-start justify-between gap-4 mt-auto">
                 <div className="flex flex-wrap gap-1.5">
                   {project.tech.map((t, idx) => (
-                    <span 
+                    <span
                       key={idx}
                       className="px-2 py-0.5 text-[9px] font-mono font-semibold rounded bg-slate-50 text-slate-500 border border-slate-200"
                     >
@@ -93,7 +93,7 @@ export default function SelectedWork() {
                 </div>
 
                 {project.link && (
-                  <a 
+                  <a
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"

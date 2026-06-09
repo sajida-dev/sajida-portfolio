@@ -113,71 +113,169 @@ export const portfolioData = {
       title: "AwazDo (Production Maintenance & Debugging)",
       role: "Backend Developer (Freelance)",
       badges: ["Production System"],
-      description: "Worked on a live US-based platform, taking ownership of production issues across the application. Investigated and resolved backend bugs, database-related problems, API failures, and user-reported issues, improving platform stability and overall system reliability. Collaborated with existing codebases, identified root causes of complex problems, and delivered fixes without disrupting active users.",
-      tech: ["Laravel", "PHP", "MySQL", "API Tuning"]
+      description:
+        "Worked on a live US-based platform, taking ownership of production issues across the application. Investigated and resolved backend bugs, database-related problems, API failures, and user-reported issues, improving platform stability and overall system reliability. Collaborated with existing codebases, identified root causes of complex problems, and delivered fixes without disrupting active users.",
+      tech: [
+        "CodeIgniter",
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "Blade Templates",
+        "Server-Side DataTables"
+      ]
     },
+
     {
       id: "load-masta",
       title: "Load Masta",
       role: "Full-Stack Laravel Developer",
       badges: ["Commercial"],
-      description: "Joined an existing logistics management platform and led major system enhancements across both frontend and backend. Replaced static permission handling with a dynamic Role & Permission Management System, allowing administrators to create and manage access controls without code changes. Implemented Two-Factor Authentication (2FA), profile management features, and multiple administrative modules. Also modernized the frontend architecture, improved responsiveness across devices, and redesigned several user interfaces to create a more polished user experience.",
-      tech: ["Laravel", "PHP", "MySQL", "JavaScript"]
+      description:
+        "Joined an existing logistics management platform and led major system enhancements across both frontend and backend. Replaced static permission handling with a dynamic Role & Permission Management System, allowing administrators to create and manage access controls without code changes. Implemented Two-Factor Authentication (2FA), profile management features, and multiple administrative modules. Also modernized the frontend architecture, improved responsiveness across devices, and redesigned several user interfaces to create a more polished user experience.",
+      tech: [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Livewire",
+        "Server-Side DataTables"
+      ]
     },
+
     {
       id: "belauctions",
       title: "Belauctions",
       role: "Laravel Backend Developer",
       badges: ["Commercial"],
-      description: "Contributed to a live auction platform by designing and developing Laravel REST APIs used across multiple application modules. Implemented backend business logic, optimized database interactions, and integrated APIs with frontend components to support seamless data exchange and platform functionality.",
-      tech: ["Laravel", "MySQL", "REST APIs"]
+      description:
+        "Contributed to a live auction platform by designing and developing Laravel REST APIs used across multiple application modules. Implemented backend business logic, optimized database interactions, and integrated APIs with frontend components to support seamless data exchange and platform functionality.",
+      tech: [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "REST APIs"
+      ]
     },
+
     {
       id: "tusksol",
       title: "TuskSol",
       role: "Frontend Developer",
       badges: ["Client System"],
-      description: "Enhanced the responsiveness of an existing business platform by redesigning frontend layouts and improving cross-device compatibility. Fixed UI inconsistencies and implemented visual improvements that provided a smoother experience for end users.",
-      tech: ["Vue.js", "JavaScript", "Responsive Design"]
+      description:
+        "Enhanced the responsiveness of an existing business platform by redesigning frontend layouts and improving cross-device compatibility. Fixed UI inconsistencies and implemented visual improvements that provided a smoother experience for end users.",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
+
+    {
+      id: "review-recommender",
+      title: "Review-Based Product Recommender System (AI-Powered)",
+      role: "AI Engineer & Full-Stack Developer",
+      badges: ["AI Project", "Research"],
+      description:
+        "Developed an AI-powered recommendation system that analyzes customer reviews to generate personalized product recommendations. Built a machine learning pipeline for sentiment and review analysis, integrated recommendation APIs, and deployed AI models using AWS cloud services. Combined Laravel and Vue.js with Python-based ML services to deliver intelligent recommendations.",
+      tech: [
+        "AWS SageMaker",
+        "AWS S3",
+        "Python",
+        "Flask",
+        "Laravel 12",
+        "Vue.js",
+        "Laravel Starter Kit",
+        "Server-Side DataTables",
+        "Social Login",
+        "Git",
+        "GitHub"
+      ],
+      link: "https://github.com/sajida-dev/reviews-based-product-recommender-system",
+      type: "GitHub"
+    },
+
     {
       id: "real-estate",
       title: "Real Estate Management System",
       role: "Full-Stack Developer",
       badges: ["SaaS Platform"],
-      description: "Built a full-scale platform with agents and client users and implemented real-time notifications. Integrated Stripe payments, SMTP email, queued email jobs and chat system using WebSockets. Scheduled cron jobs for automated tasks and reports.",
-      tech: ["Laravel", "Pusher", "Stripe", "Redis"],
-      link: "https://github.com/sajida-dev",
+      description:
+        "Built a full-scale real estate management platform with agents and client users. Implemented property management workflows, real-time notifications, payment integrations, email services, chat functionality, and automated background processes to streamline operations.",
+      tech: [
+        "Laravel",
+        "Vue.js",
+        "PHP",
+        "Tailwind CSS",
+        "Server-Side DataTables",
+        "Git",
+        "GitHub"
+      ],
+      link: "https://github.com/sajida-dev/rems-laravel",
       type: "GitHub"
     },
+
     {
       id: "university-system",
       title: "University Management System",
       role: "Full-Stack Developer",
       badges: ["Client System"],
-      description: "Built an UMS using Laravel to automate and streamline various academic and administrative tasks for different users like Admins, Faculty, Jobs, Students, and Applicants.",
-      tech: ["Laravel", "PHP", "MySQL"],
-      link: "https://github.com/sajida-dev",
+      description:
+        "Built a University Management System to automate academic and administrative workflows for Admins, Faculty, Students, Applicants, and Job Management modules. Developed role-based functionality and streamlined institutional operations.",
+      tech: [
+        "Laravel 10",
+        "Blade",
+        "AJAX",
+        "jQuery",
+        "Tailwind CSS",
+        "Git",
+        "GitHub",
+        "JavaScript",
+        "Server-Side DataTables",
+      ],
+      link: "https://github.com/sajida-dev/University-Management-System-Laravel-Project",
       type: "GitHub"
     },
+
     {
       id: "photography-studio",
       title: "Photography Website (Javed Studio)",
       role: "Frontend Developer",
-      badges: ["Portfolio Site"],
-      description: "Built a photography portfolio website by using Masonry layout showcasing categorized images.",
-      tech: ["JavaScript", "HTML", "Masonry CSS"],
-      link: "https://sajidajaved.netlify.app",
+      badges: ["Customer Portfolio Site"],
+      description:
+        "Built a photography portfolio website using Masonry layout to showcase categorized image galleries with a responsive and visually appealing user experience.",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Masonry Layout"
+      ],
+      link: "https://javedstudio.netlify.app",
       type: "Live"
     },
+
     {
       id: "multi-school",
-      title: "Multi-School Management System (Paid Project)",
+      title: "Multi-School Management System",
       role: "Full-Stack Developer",
-      badges: ["SaaS Platform"],
-      description: "Built a multi-tenant School Management System with modular design and role-based access control. Improved system performance by implementing server-side processing for large data handling. Automated background tasks (notifications, reminders, reports) using queues and scheduled jobs. Deployed and maintained the production application on a live server.",
-      tech: ["Laravel", "Vue.js", "MySQL", "Hostinger"],
-      link: "https://github.com/sajida-dev",
+      badges: ["SaaS Platform", "Paid Project"],
+      description:
+        "Built a multi-tenant School Management System with modular architecture and role-based access control. Improved system scalability through server-side processing, automated notifications and reporting with queues and scheduled jobs, and managed deployment and maintenance of the production application.",
+      tech: [
+        "Laravel 12",
+        "Vue.js",
+        "Tailwind CSS",
+        "Inertia.js",
+        "Livewire",
+        "Server-Side DataTables",
+        "Vite",
+        "MySQL",
+        "jQuery",
+        "AJAX"
+      ],
+      link: "https://github.com/sajida-dev/multi-school-system-Laravel-vue",
       type: "GitHub"
     }
   ] as Project[],
