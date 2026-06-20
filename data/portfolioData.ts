@@ -83,7 +83,7 @@ export const portfolioData = {
     {
       role: "Full-Stack Laravel Developer",
       company: "Freelance",
-      period: "Sep 2024 – Oct 2025",
+      period: "Sep 2024 – Nov 2025",
       oneLineImpact: "Delivered scalable Laravel web applications and multi-tenant SaaS platforms.",
       description: "Developed and deployed commercial multi-tenant SaaS systems integrating secure subscription architectures and real-time messaging services.",
       contributions: [
@@ -96,7 +96,7 @@ export const portfolioData = {
     {
       role: "Backend Developer",
       company: "AwazDo",
-      period: "Aug 2023 – Jun 2024",
+      period: "Sep 2023 – Jan 2024",
       oneLineImpact: "Optimized server reliability, API performance, and database architectures.",
       description: "Investigated and resolved database query bottlenecks, connection pools, and backend production API service failures.",
       contributions: [
