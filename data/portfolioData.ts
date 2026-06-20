@@ -316,7 +316,7 @@ export const portfolioData = {
     { title: "Frontend Engineering", items: ["Vue.js", "Next.js", "JavaScript", "Responsive Design"] },
     { title: "AI & Machine Learning", items: ["Python", "PyTorch", "Scikit-Learn", "Keras", "Transformers", "NLP", "Pandas", "NumPy"] },
     { title: "Cloud & DevOps", items: ["AWS", "SageMaker", "S3", "Hostinger", "cPanel"] },
-    { title: "Databases", items: ["MySQL", "Redis"] }
+    { title: "Databases", items: ["MySQL", "Redis", "PostgreSQL"] }
   ] as SkillCategory[],
   competitiveProgramming: {
     profiles: [
