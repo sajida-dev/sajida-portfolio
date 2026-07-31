@@ -122,7 +122,7 @@ export default function Hero() {
                 {/* Image Layer 1: Clipped at bottom & sides inside circle */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[500px] h-[570px] sm:h-[570px] pointer-events-none flex items-end justify-center">
                   <Image
-                    src="/gg.png"
+                    src="/Sajida_Javed_remove-bg.png"
                     alt="Sajida Javed - Full Stack & Backend Engineer"
                     width={810}
                     height={960}
@@ -135,7 +135,7 @@ export default function Hero() {
               {/* Image Layer 2 (Pop-Out Effect): Entire Head & Hijab pop high OUTWARD above top circle edge */}
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[320px] sm:w-[500px] h-[570px] sm:h-[570px] pointer-events-none z-20 [clip-path:inset(0_0_35%_0)] flex items-end justify-center">
                 <Image
-                  src="/gg.png"
+                  src="/Sajida_Javed_remove-bg.png"
                   alt="Sajida Javed - Full Stack & Backend Engineer"
                   width={810}
                   height={960}
