@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-white text-slate-900 selection:bg-emerald-100 selection:text-emerald-950">
+      <main className="min-h-screen bg-white text-slate-900 selection:bg-purple-100 selection:text-purple-950">
         <Hero />
         <About />
         <Experience />

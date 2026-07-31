@@ -5,29 +5,27 @@ import { Server, Layout, BrainCircuit, Cloud, Database } from "lucide-react";
 
 export default function TechnicalExpertise() {
   const getCategoryIcon = (title: string) => {
-    switch (title) {
-      case "Backend Engineering": 
-        return <Server className="w-4.5 h-4.5 text-emerald-600" />;
-      case "Frontend Engineering": 
-        return <Layout className="w-4.5 h-4.5 text-slate-500" />;
-      case "AI & Machine Learning": 
-        return <BrainCircuit className="w-4.5 h-4.5 text-emerald-600" />;
-      case "Cloud & DevOps": 
-        return <Cloud className="w-4.5 h-4.5 text-slate-500" />;
-      case "Databases": 
-        return <Database className="w-4.5 h-4.5 text-slate-550" />;
-      default: 
-        return <Server className="w-4.5 h-4.5 text-slate-500" />;
+    if (title.includes("Laravel") || title.includes("Backend")) {
+      return <Server className="w-4.5 h-4.5 text-purple-600" />;
+    } else if (title.includes("Full Stack") || title.includes("Frontend")) {
+      return <Layout className="w-4.5 h-4.5 text-pink-500" />;
+    } else if (title.includes("Python") || title.includes("AI")) {
+      return <BrainCircuit className="w-4.5 h-4.5 text-amber-500" />;
+    } else if (title.includes("Cloud") || title.includes("DevOps")) {
+      return <Cloud className="w-4.5 h-4.5 text-purple-600" />;
+    } else if (title.includes("Database")) {
+      return <Database className="w-4.5 h-4.5 text-pink-500" />;
     }
+    return <Server className="w-4.5 h-4.5 text-purple-600" />;
   };
 
   return (
-    <section id="skills" className="py-24 bg-slate-50 border-b border-slate-200">
+    <section id="skills" className="py-24 bg-white border-b border-slate-200/80">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Section Heading */}
         <div className="mb-16 text-left">
-          <h2 className="text-slate-900 font-semibold tracking-tight text-[32px] md:text-[36px]">
+          <h2 className="text-slate-900 font-bold tracking-tight text-[32px] md:text-[36px]">
             Technical Expertise
           </h2>
           <p className="text-slate-500 text-[15px] leading-[1.7] mt-1.5 max-w-xl">
@@ -40,13 +38,13 @@ export default function TechnicalExpertise() {
           {portfolioData.skills.map((category, idx) => (
             <div 
               key={idx} 
-              className="p-6 bg-white border border-slate-200 rounded-xl hover:border-emerald-300 transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.01)]"
+              className="p-6 bg-white border border-slate-200/80 rounded-xl hover:border-purple-300 transition-all duration-300 shadow-xs"
             >
               <div className="flex items-center gap-3.5 mb-5">
-                <div className="p-2 bg-slate-50 border border-slate-100 rounded">
+                <div className="p-2.5 bg-purple-50/60 border border-purple-100 rounded-xl">
                   {getCategoryIcon(category.title)}
                 </div>
-                <h3 className="font-sans font-semibold text-slate-900 text-[16px] leading-snug">
+                <h3 className="font-sans font-bold text-slate-900 text-[16px] leading-snug">
                   {category.title}
                 </h3>
               </div>
@@ -55,7 +53,7 @@ export default function TechnicalExpertise() {
                 {category.items.map((skill, skillIdx) => (
                   <span 
                     key={skillIdx}
-                    className="px-2.5 py-1 text-[11px] font-mono font-medium uppercase tracking-[0.08em] rounded-md bg-slate-50 border border-slate-200 text-slate-600 hover:text-emerald-600 hover:border-emerald-300 transition-all cursor-default"
+                    className="px-2.5 py-1 text-[11px] font-mono font-medium uppercase tracking-[0.08em] rounded-md bg-slate-50 border border-slate-200 text-slate-600 hover:text-purple-600 hover:border-purple-300 transition-all cursor-default"
                   >
                     {skill}
                   </span>

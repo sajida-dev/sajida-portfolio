@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "convert-images": "node scripts/convert-to-webp.mjs",
+    "clean": "node -e \"fs.rmSync('.next', { recursive: true, force: true }); console.log('Next.js cache cleared!');\""
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
@@ -34,6 +36,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.0",
     "postcss": "^8",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

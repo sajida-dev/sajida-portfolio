@@ -13,16 +13,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 142.1 76.2% 36.3%; /* #059669 Emerald Green */
+    --primary: 262.1 83.3% 57.8%; /* #8B5CF6 Purple */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 170.6 86.9% 39.8%; /* Teal/Emerald Secondary */
+    --secondary: 326 100% 60%; /* Magenta/Pink */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%; /* #F1F5F9 */
     --muted-foreground: 215.4 16.3% 46.9%; /* #475569 */
 
-    --accent: 210 40% 96.1%;
+    --accent: 24.6 95% 53.1%; /* Orange #F97316 */
     --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,7 +30,7 @@
 
     --border: 214.3 31.8% 91.4%; /* #E2E8F0 */
     --input: 214.3 31.8% 91.4%;
-    --ring: 142.1 76.2% 36.3%;
+    --ring: 262.1 83.3% 57.8%;
 
     --radius: 0.5rem;
   }
@@ -46,9 +46,19 @@
   }
 }
 
-/* Custom Utilities for Premium B2B SaaS Flat UI */
+/* Custom Utilities for Premium Gradient UI */
 @layer utilities {
+  .btn-gradient {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 hover:from-purple-700 hover:via-pink-600 hover:to-amber-600 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 bg-clip-text text-transparent;
+  }
+  .gradient-border {
+    @apply border border-transparent bg-origin-border bg-clip-border;
+  }
   .saas-card {
-    @apply bg-white border border-slate-200 rounded-xl hover:border-emerald-350 transition-all duration-200;
+    @apply bg-white border border-slate-200 rounded-xl hover:border-purple-300 transition-all duration-200;
   }
 }
+

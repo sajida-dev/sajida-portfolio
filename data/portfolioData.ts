@@ -48,9 +48,9 @@ export interface Certification {
 export const portfolioData = {
   hero: {
     name: "Sajida Javed",
-    title: "Engineering Reliable SaaS & AI Systems",
+    title: "Full Stack Laravel & Backend Software Engineer",
     stanfordBadge: "Section Leader @ Stanford Code in Place (2026)",
-    statement: "Building production-ready Laravel web applications, multi-tenant SaaS platforms, and secure backend architectures.",
+    statement: "Full Stack Laravel Developer delivering custom web application development services, multi-tenant SaaS platforms, and secure backend architectures.",
     metrics: [
       { value: "3+ Years", label: "Dev Experience" },
       { value: "7+", label: "Commercial Projects" },
@@ -58,9 +58,9 @@ export const portfolioData = {
     ]
   },
   about: {
-    description: "Full-Stack Developer and AI Engineer with experience building scalable Laravel, Vue.js, and AI-powered applications using Python and AWS. Skilled in REST APIs, real-time systems, payment integration, and machine learning solutions. Developed multi-tenant platforms, recommendation systems, and production-ready web applications. Stanford Code in Place Section Leader 2026 with strong competitive programming and problem-solving background.",
+    description: "Full Stack Laravel Developer, PHP Engineer, and AI Specialist with extensive experience delivering web application development services, modern Vue.js and Next.js frontends, and intelligent AI solutions using Python and AWS. Skilled in REST API tuning, real-time messaging, secure payment gateway integrations, and data analysis with Python. Built multi-tenant SaaS platforms and production-ready software applications. Stanford Code in Place Section Leader 2026 with a strong competitive programming and problem-solving background.",
     highlights: [
-      "3+ years building Laravel and SaaS applications",
+      "3+ years in Full Stack Laravel & SaaS web development",
       "Stanford Code in Place Section Leader (2026)",
       "96.7 percentile in National Skill Competency Test",
       "Competitive programmer with national-level achievements"
@@ -312,11 +312,11 @@ export const portfolioData = {
     { title: "Competitions", subtitle: "6", desc: "Top placements in programming contests." }
   ],
   skills: [
-    { title: "Backend Engineering", items: ["Laravel", "PHP", "REST APIs", "Authentication", "RBAC", "WebSockets"] },
-    { title: "Frontend Engineering", items: ["Vue.js", "Next.js", "JavaScript", "Responsive Design"] },
-    { title: "AI & Machine Learning", items: ["Python", "PyTorch", "Scikit-Learn", "Keras", "Transformers", "NLP", "Pandas", "NumPy"] },
-    { title: "Cloud & DevOps", items: ["AWS", "SageMaker", "S3", "Hostinger", "cPanel"] },
-    { title: "Databases", items: ["MySQL", "Redis", "PostgreSQL"] }
+    { title: "Laravel & PHP Development", items: ["Laravel 12", "PHP", "REST APIs", "Authentication & RBAC", "WebSockets", "Blade & Livewire"] },
+    { title: "Full Stack Web Engineering", items: ["Vue.js", "Next.js", "JavaScript", "Inertia.js", "Tailwind CSS", "Responsive Design"] },
+    { title: "Python & Machine Learning", items: ["Python", "Data Analysis with Python", "PyTorch", "Scikit-Learn", "Transformers", "NLP", "Pandas", "NumPy"] },
+    { title: "Cloud & SaaS DevOps", items: ["AWS (SageMaker, S3)", "CI/CD Pipelines", "Hostinger", "cPanel", "Git"] },
+    { title: "Database Systems", items: ["MySQL Optimization", "Redis Caching", "PostgreSQL", "Data Analytics"] }
   ] as SkillCategory[],
   competitiveProgramming: {
     profiles: [
@@ -327,12 +327,12 @@ export const portfolioData = {
       { name: "Hugging Face", url: "https://huggingface.co/sajida-dev" }
     ],
     competitions: [
-      { name: "UOE Speed Programming Competition (Dec 2024)", url: "https://drive.google.com/file/d/1wIJXfJ-GgC-CjNORK2t0a1MRgEYEbKpq/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe dec 2024.png" },
-      { name: "UOE Speed Programming Competition (April 2025)", url: "https://drive.google.com/file/d/11uRthmTXWfOqqMhLfKrlM7FXUqdwVScY/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe april 2025.png" },
-      { name: "Codex 2.0 (Namal)", url: "https://drive.google.com/file/d/1N_jDgpbRIOwnQf6XPgD04GHVK1nprMFA/view?usp=drive_link", badge: "Top 5", image: "/competition_certificates/codex2.0.jpeg" },
-      { name: "CALICO Spring 2025 (UC Berkeley)", url: "https://drive.google.com/file/d/1bDC65JYVoB-iT_6S_IBZM5UtJlAcNEto/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 25.png" },
-      { name: "ICSC 2025", url: "https://icscompetition.org/c/Certificate-QR-2025-FF828CF9590-abad82cee5f29a2604b408b38147f777.pdf", badge: "Certificate", image: "/competition_certificates/icsc qualification round certificate.png" },
-      { name: "CALICO Spring 2026 (UC Berkeley)", url: "https://drive.google.com/file/d/1oguUwtW_GE6DL5dnx0JQQ15YfJ5xGBQo/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 26.png" },
+      { name: "UOE Speed Programming Competition (Dec 2024)", url: "https://drive.google.com/file/d/1wIJXfJ-GgC-CjNORK2t0a1MRgEYEbKpq/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe dec 2024.webp" },
+      { name: "UOE Speed Programming Competition (April 2025)", url: "https://drive.google.com/file/d/11uRthmTXWfOqqMhLfKrlM7FXUqdwVScY/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe april 2025.webp" },
+      { name: "Codex 2.0 (Namal)", url: "https://drive.google.com/file/d/1N_jDgpbRIOwnQf6XPgD04GHVK1nprMFA/view?usp=drive_link", badge: "Top 5", image: "/competition_certificates/codex2.0.webp" },
+      { name: "CALICO Spring 2025 (UC Berkeley)", url: "https://drive.google.com/file/d/1bDC65JYVoB-iT_6S_IBZM5UtJlAcNEto/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 25.webp" },
+      { name: "ICSC 2025", url: "https://icscompetition.org/c/Certificate-QR-2025-FF828CF9590-abad82cee5f29a2604b408b38147f777.pdf", badge: "Certificate", image: "/competition_certificates/icsc qualification round certificate.webp" },
+      { name: "CALICO Spring 2026 (UC Berkeley)", url: "https://drive.google.com/file/d/1oguUwtW_GE6DL5dnx0JQQ15YfJ5xGBQo/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 26.webp" },
       { name: "MIT² Informatics Tournament", badge: "Qualified" },
       { name: "ICPC Winter Challenge (Huawei)", badge: "Participant" }
     ] as Competition[]
@@ -341,97 +341,97 @@ export const portfolioData = {
     {
       title: "Neural Networks and Deep Learning",
       issuer: "DeepLearning.AI (Coursera)",
-      image: "/all_certificates/Coursera - neural networks and deep learning CVCU5BGISF77.png",
+      image: "/all_certificates/Coursera - neural networks and deep learning CVCU5BGISF77.webp",
       category: "AI & ML"
     },
     {
       title: "Improving Deep Neural Networks",
       issuer: "DeepLearning.AI (Coursera)",
-      image: "/all_certificates/Coursera improving hyperparams SH9FRVBP959T.png",
+      image: "/all_certificates/Coursera improving hyperparams SH9FRVBP959T.webp",
       category: "AI & ML"
     },
     {
       title: "Structuring Machine Learning Projects",
       issuer: "DeepLearning.AI (Coursera)",
-      image: "/all_certificates/Coursera QSXWU5CHJVZB.png",
+      image: "/all_certificates/Coursera QSXWU5CHJVZB.webp",
       category: "AI & ML"
     },
     {
       title: "Data Analyst Professional Certificate",
       issuer: "IBM / Coursera",
-      image: "/all_certificates/Sajida Javed Data analyst.png",
+      image: "/all_certificates/Sajida Javed Data analyst.webp",
       category: "AI & ML"
     },
     {
       title: "National Skill Competency Test (NCST)",
       issuer: "National IT Board",
-      image: "/all_certificates/ncst 2026.jpeg",
+      image: "/all_certificates/ncst 2026.webp",
       category: "Other Professional"
     },
     {
       title: "IT & Software Development Internship",
       issuer: "Police Department IT Division",
-      image: "/all_certificates/police internship.jpeg",
+      image: "/all_certificates/police internship.webp",
       category: "Other Professional"
     },
     {
       title: "1-Year Diploma in Computer Applications",
       issuer: "Technical Education Board",
-      image: "/all_certificates/1 year computer course.jpeg",
+      image: "/all_certificates/1 year computer course.webp",
       category: "Other Professional"
     },
     {
       title: "7-Day LeetCode Streak Challenge",
       issuer: "LeetCode",
-      image: "/all_certificates/7 days leetcode Sajida Javed.png",
+      image: "/all_certificates/7 days leetcode Sajida Javed.webp",
       category: "Programming"
     },
     {
       title: "WordSprint 2.0 Competency Certificate",
       issuer: "Namal University",
-      image: "/all_certificates/Sajida Javed WordSprint 2.0 Certificate.png",
+      image: "/all_certificates/Sajida Javed WordSprint 2.0 Certificate.webp",
       category: "Programming"
     },
     {
       title: "Problem Solving (Basic)",
       issuer: "HackerRank",
-      image: "/all_certificates/hackerrank problem solving basic certificate.png",
+      image: "/all_certificates/hackerrank problem solving basic certificate.webp",
       category: "Programming"
     },
     {
       title: "Problem Solving Skills (Basic)",
       issuer: "HackerRank",
-      image: "/all_certificates/problem_solving_basic certificate.png",
+      image: "/all_certificates/problem_solving_basic certificate.webp",
       category: "Programming"
     },
     {
       title: "Python Programming (Basic)",
       issuer: "HackerRank",
-      image: "/all_certificates/python_basic certificate.png",
+      image: "/all_certificates/python_basic certificate.webp",
       category: "Programming"
     },
     {
       title: "Blockchain & Web Integration",
       issuer: "Namal Web3/Blockchain Lab",
-      image: "/all_certificates/sajida javed integration blockchain web.png",
+      image: "/all_certificates/sajida javed integration blockchain web.webp",
       category: "Web & Database"
     },
     {
       title: "Web Development Specialist",
       issuer: "Software Industry Certification",
-      image: "/all_certificates/web.jpeg",
+      image: "/all_certificates/web.webp",
       category: "Web & Database"
     },
     {
       title: "Amazon Virtual Assistant (VA)",
       issuer: "E-Commerce Training Group",
-      image: "/all_certificates/virtual assistant for amazon.jpeg",
+      image: "/all_certificates/virtual assistant for amazon.webp",
       category: "Other Professional"
     },
     {
       title: "Chinese Language Certificate",
       issuer: "Language Competency Board",
-      image: "/all_certificates/chinese language.jpeg",
+      image: "/all_certificates/chinese language.webp",
       category: "Other Professional"
     }
   ] as Certification[],

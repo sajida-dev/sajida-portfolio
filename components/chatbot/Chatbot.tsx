@@ -56,7 +56,7 @@ export default function Chatbot() {
         {/* Header */}
         <div className="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
           <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse" />
             <h3 className="font-sora font-semibold text-slate-800 text-xs">Assistant (Mock AI)</h3>
           </div>
           <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-600 transition-colors cursor-pointer">
