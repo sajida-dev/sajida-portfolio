@@ -308,7 +308,7 @@ export const portfolioData = {
   featuredHighlights: [
     { title: "AI Projects", subtitle: "5", desc: "AI-driven applications and research implementations." },
     { title: "Open Source", subtitle: "10+", desc: "Contributions to community libraries and tools." },
-    { title: "Certifications", subtitle: "12", desc: "Completed AI and development certifications." },
+    { title: "Certifications", subtitle: "17", desc: "Completed AI and development certifications." },
     { title: "Competitions", subtitle: "6", desc: "Top placements in programming contests." }
   ],
   skills: [
@@ -330,14 +330,20 @@ export const portfolioData = {
       { name: "UOE Speed Programming Competition (Dec 2024)", url: "https://drive.google.com/file/d/1wIJXfJ-GgC-CjNORK2t0a1MRgEYEbKpq/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe dec 2024.webp" },
       { name: "UOE Speed Programming Competition (April 2025)", url: "https://drive.google.com/file/d/11uRthmTXWfOqqMhLfKrlM7FXUqdwVScY/view?usp=drive_link", badge: "1st Place", image: "/competition_certificates/uoe april 2025.webp" },
       { name: "Codex 2.0 (Namal)", url: "https://drive.google.com/file/d/1N_jDgpbRIOwnQf6XPgD04GHVK1nprMFA/view?usp=drive_link", badge: "Top 5", image: "/competition_certificates/codex2.0.webp" },
-      { name: "CALICO Spring 2025 (UC Berkeley)", url: "https://drive.google.com/file/d/1bDC65JYVoB-iT_6S_IBZM5UtJlAcNEto/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 25.webp" },
+      { name: "CALICO Spring 2025 (UC Berkeley)", url: "https://drive.google.com/file/d/1bDC65JYVoB-iT_6S_IBZM5UtJlAcNEto/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico competition certificate 2025.webp" },
       { name: "ICSC 2025", url: "https://icscompetition.org/c/Certificate-QR-2025-FF828CF9590-abad82cee5f29a2604b408b38147f777.pdf", badge: "Certificate", image: "/competition_certificates/icsc qualification round certificate.webp" },
-      { name: "CALICO Spring 2026 (UC Berkeley)", url: "https://drive.google.com/file/d/1oguUwtW_GE6DL5dnx0JQQ15YfJ5xGBQo/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico 26.webp" },
+      { name: "CALICO Spring 2026 (UC Berkeley)", url: "https://drive.google.com/file/d/1oguUwtW_GE6DL5dnx0JQQ15YfJ5xGBQo/view?usp=drive_link", badge: "Certificate", image: "/competition_certificates/calico competition certificate 2026.webp" },
       { name: "MIT² Informatics Tournament", badge: "Qualified" },
       { name: "ICPC Winter Challenge (Huawei)", badge: "Participant" }
     ] as Competition[]
   },
   certifications: [
+    {
+      title: "Stanford Code in Place Section Leader",
+      issuer: "Stanford University",
+      image: "/all_certificates/Stanford Code In Place Section Leader.webp",
+      category: "Programming"
+    },
     {
       title: "Neural Networks and Deep Learning",
       issuer: "DeepLearning.AI (Coursera)",

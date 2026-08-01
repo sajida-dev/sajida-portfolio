@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "convert-images": "node scripts/convert-to-webp.mjs",
+    "rotate-images": "node scripts/rotate-images.mjs",
     "clean": "node -e \"fs.rmSync('.next', { recursive: true, force: true }); console.log('Next.js cache cleared!');\""
   },
   "dependencies": {
