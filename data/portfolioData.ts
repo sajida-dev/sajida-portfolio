@@ -483,6 +483,7 @@ export const portfolioData = {
     email: "sajidajaved604@gmail.com",
     linkedin: "https://linkedin.com/in/sajida-javed",
     github: "https://github.com/sajida-dev",
+    dribbble: "https://dribbble.com/sajida-javed",
     portfolio: "https://sajidajaved.netlify.app",
     leetcode: "https://leetcode.com/SajidaJaved",
     hackerrank: "https://hackerrank.com/sajidajaved",

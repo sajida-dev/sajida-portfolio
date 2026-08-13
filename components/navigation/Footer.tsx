@@ -1,5 +1,5 @@
 import { portfolioData } from "@/data/portfolioData";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Dribbble } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -28,6 +28,9 @@ export default function Footer() {
           </a>
           <a href={portfolioData.contact.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-600 transition-colors" title="LinkedIn">
             <Linkedin className="w-5 h-5" />
+          </a>
+          <a href={portfolioData.contact.dribbble} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-rose-500 transition-colors" title="Dribbble">
+            <Dribbble className="w-5 h-5" />
           </a>
           <a href={`mailto:${portfolioData.contact.email}`} className="text-slate-400 hover:text-purple-600 transition-colors" title="Email">
             <Mail className="w-5 h-5" />

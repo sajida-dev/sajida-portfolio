@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { Mail, Github, Linkedin, FileText, Copy, Check } from "lucide-react";
+import { Mail, Github, Linkedin, FileText, Copy, Check, Dribbble } from "lucide-react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -90,6 +90,18 @@ export default function Contact() {
                   <Github className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-semibold font-mono text-slate-500 group-hover:text-pink-600 transition-colors">GitHub</span>
+              </a>
+
+              <a 
+                href={portfolioData.contact.dribbble} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="flex flex-col items-center gap-1.5 group"
+              >
+                <div className="p-3.5 bg-rose-50/60 border border-rose-100 rounded-full group-hover:bg-rose-500 group-hover:border-rose-500 transition-all text-rose-500 group-hover:text-white shadow-xs">
+                  <Dribbble className="w-5 h-5" />
+                </div>
+                <span className="text-[10px] font-semibold font-mono text-slate-500 group-hover:text-rose-500 transition-colors">Dribbble</span>
               </a>
 
               <a 
