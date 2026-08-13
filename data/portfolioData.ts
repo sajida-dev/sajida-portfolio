@@ -109,6 +109,44 @@ export const portfolioData = {
   ] as Experience[],
   projects: [
     {
+      id: "greenwindows",
+      title: "Greenwindows (France Client Project)",
+      role: "Full-Stack Frontend Developer",
+      badges: ["France Client", "Live Site"],
+      description:
+        "Engineered a high-conversion, multi-language web application for a French architectural renovation client in Paris. Implemented custom window and door quote configurators, interactive step-by-step estimators, 24/7 emergency dispatch interfaces, and seamless multi-language switching (French, English, etc.).",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "i18n Multi-Language",
+        "Framer Motion",
+        "Vercel"
+      ],
+      link: "https://demo-jet-sigma.vercel.app/",
+      type: "Live"
+    },
+    {
+      id: "infinix-calculator",
+      title: "Infinix Calculators (SEO-Driven Web Platform)",
+      role: "Full-Stack Developer & SEO Specialist",
+      badges: ["Live Production", "High-Traffic SEO"],
+      description:
+        "Designed, developed, and deployed a high-performance web platform featuring 30+ interactive utility tools across finance, construction, tax payroll, and health. Optimized UI/UX for zero-friction client-side calculations, and executed an advanced technical SEO & structured schema strategy that achieved high search engine ranking and drove exceptional organic click-through rates.",
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Technical SEO",
+        "JSON-LD Schema",
+        "Vercel",
+        "Core Web Vitals"
+      ],
+      link: "https://infinixcalculator.com/",
+      type: "Live"
+    },
+    {
       id: "awazdo-project",
       title: "AwazDo (Production Maintenance & Debugging)",
       role: "Backend Developer (Freelance)",

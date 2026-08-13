@@ -1,11 +1,15 @@
 "use client";
 
 import { portfolioData } from "@/data/portfolioData";
-import { Shield, Server, Activity, Layout, Home, GraduationCap, Camera, Landmark, ExternalLink } from "lucide-react";
+import { Shield, Server, Activity, Layout, Home, GraduationCap, Camera, Landmark, ExternalLink, Globe, Calculator } from "lucide-react";
 
 export default function SelectedWork() {
   const getProjectIcon = (id: string) => {
     switch (id) {
+      case "greenwindows":
+        return <Globe className="w-5 h-5 text-emerald-600" />;
+      case "infinix-calculator":
+        return <Calculator className="w-5 h-5 text-blue-600" />;
       case "load-masta":
         return <Shield className="w-5 h-5 text-purple-600" />;
       case "multi-school":
